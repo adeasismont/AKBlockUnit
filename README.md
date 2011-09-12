@@ -11,7 +11,7 @@ Belows describes how to create a simple sine tone.
 
 + create a render callback
 
-````
+````objective-c
 const float kFrequency = 11000;
 const float kGain = 1.0;
 const float kWaveform = (kFrequency * 2. * M_PI);
@@ -38,13 +38,13 @@ AKAudioCallback callback = ^OSStatus(AudioUnit audioUnit,
 
 + create the AKBlockUnit instance
 
-````
+````objective-c
 AKBlockUnit *unit = [[AKBlockUnit alloc] initWithBlock:callback];
 ````
 
 + start the output
 
-````
+````objective-c
 [unit start];
 ````
 
